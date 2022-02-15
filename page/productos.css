@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: white;
+}
+
+li {
+    list-style: none;
+    margin: 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+h1, h2 {
+    font-size: 2rem;
+}
+
+li:hover{
+    background-color: rgb(62, 74, 179);
+    
+}
+
+ul {
+    display: flex;
+}
+h2{
+    color: aliceblue;
+    background-image: url(/barra.svg);
+    font-size: 3rem;
+    border: #7e7e8d 5px double;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+.Header { grid-area: Header;
+    padding: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    background-color: #7e7e8d;
+}
+.Footer { 
+    background-color: #7e7e8d;
+    grid-area: Footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ .container {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 500px 150px 500px 150px;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 20px 40px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "imagen1 imagen2"
+      "texto1 texto2"
+      "imagen4 imagen5"
+      "texto4 texto5";
+  }
+  
+  .imagen1 {
+       grid-area: imagen1;
+       background-image: url(/ricohmp.301.jpg);
+       padding-top: 70px;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       background-repeat: no-repeat;
+    }
+  
+  .imagen2 { 
+    grid-area: imagen2;
+    background-image: url(/ricohmp.301.jpg);
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-repeat: no-repeat;
+}
+  
+  .imagen4 {
+    grid-area: imagen4; 
+    background-image: url(/ricohmp.301.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-repeat: no-repeat;
+}
+  
+  .imagen5 { 
+    grid-area: imagen5;
+    background-image: url(/ricohmp.301.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-repeat: no-repeat;
+    
+}
+  
+  .texto1 { 
+    grid-area: texto1;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+.texto2 { 
+    grid-area: texto2; 
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.texto4 { 
+    grid-area: texto4;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.texto5 { 
+    grid-area: texto5; 
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+
+/*--------------medias------------*/
+
+@media only screen and (max-wh){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px 100px;
+        grid-auto-columns: 1fr;
+        grid-auto-rows: 1fr;
+        gap: 10px 20px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "imagen1"
+        "texto1"
+        "imagen2"
+        "texto2"
+        "imagen3"
+        "texto3"
+        "imagen4"
+        "texto4"
+        "imagen5"
+        "texto5";}
+    .Header{
+            padding: 0px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            background-color: #7e7e8d;
+        }
+    .subtitulo{
+        color: rgb(79, 114, 146);
+        background-color: beige;
+        font-size: 1rem;
+        border: #1a1a20 2px double;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+    }
+}
